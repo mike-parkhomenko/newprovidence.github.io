@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Заголовок</title>
+	<meta name="description" content="">
+
+	<!-- Bootstrap v3.3.4 Grid Styles -->
+	<style>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}</style>
+	
+	<!-- Header CSS (First Sections of Website: paste after release from _header.min.css here) -->
+	<style></style>
+
+	<!-- Fonts Loader from _fonts.css (HTML5 LocalStorage) -->
+	<script>!function(){function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===e}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(o))a(localStorage.font_css_cache);else{var n=new XMLHttpRequest;n.open("GET",o,!0),e(n,"load",function(){4===n.readyState&&(a(n.responseText),localStorage.font_css_cache=n.responseText,localStorage.font_css_cache_file=o)}),n.send()}else{var c=document.createElement("link");c.href=o,c.rel="stylesheet",c.type="text/css",document.getElementsByTagName("head")[0].appendChild(c),document.cookie="font_css_cache"}}function a(e){var t=document.createElement("style");t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t)}var o="_fonts.min.css";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?n():e(window,"load",n)}();</script>
+	
+	<!-- Load CSS Compilled without JS -->
+	<noscript>
+		<link rel="stylesheet" href="_header.min.css">
+		<link rel="stylesheet" href="_main.min.css">
+	</noscript>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+</head>
+
+<body>
+
+	<header class="main-head">
+		
+		<div class="top-line">
+			
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-4">
+					
+						<a href="#" class="toggle-mnu"><span></span></a>
+					
+						<div class="main-mnu hidden-sm hidden-xs">
+
+							<ul class="left-mnu">
+								<li><a href="#">Tour</a></li>
+								<li><a href="#">Features</a></li>
+								<li><a href="#">Pricing</a></li>
+							</ul>
+
+						</div>
+						
+					</div>
+					
+					<div class="col-md-4 col-sm-12">
+					
+						<div class="logo-wrap">
+						
+							<a href="/" class="logo"><img src="img/logo.png" alt=""></a>
+						
+						</div>
+						
+					</div>
+					
+					<div class="col-md-4">
+					
+						<div class="r-mnu hidden-sm hidden-xs">
+
+							<ul>
+								<li><a href="#"><span>Help</span></a></li>
+								<li><a href="#">Contacts</a></li>
+								<a href="#" class="button"><i class="fa fa-apple" aria-hidden="true"></i>Get App</a>
+							</ul>
+
+						</div>
+						
+						
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="vert-mnu">
+						
+						<a href="#" class="logo"><img src="img/logo-white.png" alt=""></a>
+						<button type="button" id="close"><span></span></button>
+						
+						<ul>
+							<li><a href="#">Tour</a></li>
+							<li><a href="#">Features</a></li>
+							<li><a href="#">Pricing</a></li>
+							<li><a href="#">Help</a></li>
+							<li><a href="#">Contacts</a></li>
+							<li><a href="#" class="button"><i class="fa fa-apple" aria-hidden="true"></i>Get App</a></li>
+						</ul>
+						
+					</div>
+		
+		<div class="header-wrap">
+			
+			<div class="container">
+				<div class="row">
+				
+					<div class="col-sm-10 col-sm-offset-1">
+				
+						<div class="header-center">
+
+							<h1 class="">What happens tomorrow?</h1>
+							<p class="">The sight of the tumblers restored Bob Sawyer to a degree of equanimity which he had not possessed since his interview with his landlady. His face brightened up, and he began to feel quite convivial.</p>
+							
+						<a href="#" class="button"><i class="fa fa-play" aria-hidden="true"></i>Watch Video</a>
+
+						</div>
+						
+					</div>	
+					
+				</div>
+			</div>
+			
+		</div>
+		
+	</header>
+	
+	<section class="section-1">
+		
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-sm-5">
+					
+					<div class="item-wrap ">
+					
+						<div class="img-wrapper">
+
+							<svg xmlns:dc="http://purl.org/dc/elements/1.1/"
+							xmlns:cc="http://creativecommons.org/ns#"
+							xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+							xmlns:svg="http://www.w3.org/2000/svg"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 41.671875 50.954556"
+							height="48"
+							width="42"
+							version="1.1"
+							id="svg-1">
+								<metadata id="metadata8"> <rdf:RDF> <cc:Work rdf:about=""> <dc:format>image/svg+xml</dc:format> <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" /> <dc:title></dc:title> </cc:Work> </rdf:RDF> </metadata> <defs id="defs6" />
+							<path id="path4192" d="m 0.92857903,49.566183 c -0.776045,-0.935077 -1.060893,-5.750869 -0.872445,-14.75 0.267374,-12.768077 0.379753,-13.405477 2.52980297,-14.348755 1.765821,-0.774708 2.25,-1.805437 2.25,-4.789839 0,-5.631104 3.316754,-11.3338185 7.97362,-13.7095745 11.176549,-5.70185 24.02638,1.63033 24.02638,13.7095745 0,2.984402 0.484179,4.015131 2.25,4.789839 2.15005,0.943278 2.262429,1.580678 2.529803,14.348755 0.188448,8.999131 -0.0964,13.814923 -0.872445,14.75 -0.908096,1.094189 -5.126293,1.388373 -19.907358,1.388373 -14.781065,0 -18.999262,-0.294184 -19.90735797,-1.388373 z M 38.835937,35.454556 l 0,-12.5 -18,0 -18,0 0,12.5 0,12.5 18,0 18,0 0,-12.5 z M 15.90065,37.521323 c -2.233837,-2.304735 -2.870043,-3.569046 -2.050753,-4.075395 0.671237,-0.414847 2.107212,0.185355 3.302022,1.380165 l 2.114249,2.114249 3.783393,-3.694384 c 2.706342,-2.642674 4.090484,-3.387294 4.862121,-2.615658 0.771637,0.771637 0.163662,2.120931 -2.135653,4.739706 -5.061763,5.765029 -6.144266,6.000849 -9.875379,2.151317 z M 9.835937,16.904896 c 0,-6.214545 5.279661,-11.9503395 11,-11.9503395 5.720339,0 11,5.7357945 11,11.9503395 0,1.677313 0.507253,3.04966 1.127229,3.04966 0.752809,0 0.964682,-1.691661 0.637866,-5.092904 -0.385444,-4.011386 -1.159797,-5.7633355 -3.64646,-8.2499995 -4.66571,-4.665709 -13.57156,-4.665709 -18.23727,0 -2.486663,2.486664 -3.261016,4.2386135 -3.64646,8.2499995 -0.326816,3.401243 -0.114943,5.092904 0.637866,5.092904 0.619976,0 1.127229,-1.372347 1.127229,-3.04966 z m 19,-0.495795 c 0,-4.580276 -3.665975,-8.4545445 -8,-8.4545445 -4.334025,0 -8,3.8742685 -8,8.4545445 l 0,3.545455 8,0 8,0 0,-3.545455 z" style="fill:#267df4;" />
+						</svg>
+
+
+						</div>
+
+						<h4>Real-time all the time</h4>
+
+						<p>Thus much I thought proper to tell you in relation to yourself, and to the trust I reposed in you. </p>
+
+						<p>Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door.</p>
+					
+					</div>
+				
+				</div>
+				
+				<div class="col-sm-6 col-sm-offset-1">
+				
+				<div class="item-wrap">
+					
+					<div class="img-wrapper">
+					
+				<svg
+					 xmlns:dc="http://purl.org/dc/elements/1.1/"
+					 xmlns:cc="http://creativecommons.org/ns#"
+					 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+					 xmlns:svg="http://www.w3.org/2000/svg"
+					 xmlns="http://www.w3.org/2000/svg"
+					 viewBox="0 0 30.238047 35.693558"
+					 height="48"
+					 width="42"
+					 version="1.1"
+					 id="svg2">
+					<metadata
+						 id="metadata8">
+						<rdf:RDF>
+							<cc:Work
+								 rdf:about="">
+								<dc:format>image/svg+xml</dc:format>
+								<dc:type
+									 rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+								<dc:title></dc:title>
+							</cc:Work>
+						</rdf:RDF>
+					</metadata>
+					<defs
+						 id="defs6" />
+					<path
+						 id="svg-2"
+						 d="m 5.4273557,35.226744 c 0,-0.241251 0.36847,-1.127115 0.818801,-1.968587 0.660388,-1.233949 0.43938,-1.980867 -1.142339,-3.860643 C 2.5951825,26.416189 1.214476,21.801089 1.8402696,18.488982 4.2893705,5.5270841 21.176803,3.048985 27.158335,14.773757 c 2.598405,5.093293 1.672381,10.625962 -2.552121,15.247723 -1.277135,1.397239 -1.39359,1.938867 -0.617881,2.873539 1.462843,1.762616 0.192608,3.142471 -1.490538,1.619214 -1.061677,-0.960821 -2.261461,-1.137864 -5.156505,-0.760922 -2.075111,0.270173 -4.679496,0.141878 -5.787515,-0.28511 -1.6409753,-0.632384 -2.2506053,-0.500647 -3.2875613,0.710418 -1.201839,1.403631 -2.838858,2.008035 -2.838858,1.04813 z M 21.6041,29.686682 C 24.764656,27.371164 26.502762,23.42974 26.10126,19.488623 25.456941,13.16386 20.316813,8.9268681 14.061304,9.5641301 2.9571835,10.695321 0.2224197,25.25771 10.134485,30.474171 c 3.273882,1.722962 8.53617,1.361661 11.469615,-0.787489 z M 13.956043,18.583934 c 0,-3.389693 1.709646,-4.117584 2.18034,-0.928277 0.188315,1.275214 0.877779,1.692708 3.101333,1.877607 4.281824,0.356053 3.444346,1.75475 -1.211195,2.022787 l -4.070478,0.234349 0,-3.206466 z M 0.891458,11.435988 C 0.4011659,10.945696 0,9.0284171 0,7.1753691 0,2.5130128 2.5165145,0 7.1853977,0 c 2.690262,0 3.8039243,0.4433389 5.4625653,2.1745952 1.145866,1.1960264 2.083391,2.3718368 2.083391,2.6129066 0,0.241068 -1.555436,0.8738113 -3.456524,1.4060873 C 9.3737117,6.7258631 6.4602947,8.3237281 4.8005815,9.7443921 2.5267575,11.690695 1.5631331,12.107682 0.891458,11.435988 Z M 8.1410187,4.8055948 C 11.228642,3.2309809 11.233793,3.2207589 9.3080477,2.4938313 6.5009947,1.4342484 3.3690215,2.7686653 2.4455735,5.4176701 c -0.9177726,2.632738 -0.322587,3.521043 1.368195,2.041962 0.674253,-0.58984 2.6215312,-1.784156 4.3272502,-2.6540373 z M 25.37355,9.7101161 c -1.609384,-1.397565 -4.487807,-2.978263 -6.3965,-3.512661 -1.908694,-0.534404 -3.470355,-1.2099193 -3.470355,-1.5011541 0,-0.291243 0.97856,-1.4670378 2.174602,-2.6129068 C 19.342546,0.4918049 20.632041,0 23.143863,0 c 4.59647,0 7.094183,2.547473 7.094183,7.2354991 0,4.9171299 -1.29382,5.5753179 -4.864496,2.474617 z m 2.435943,-4.243672 C 26.868442,2.7669301 23.760086,1.4246725 20.930031,2.4957485 19.03609,3.212533 19.071483,3.2667123 22.62523,5.0906768 c 1.996227,1.0245713 3.852045,2.2229543 4.124059,2.6630773 1.0115,1.636629 1.820027,-0.107718 1.060204,-2.28731 z"
+						 style="fill:#267df4" />
+				</svg>
+						
+					</div>
+					
+					<h4>Adopt without any obstacles</h4>
+					
+					<p>This sounded a very good reason, and Alice was quite pleased to know it. 'I never thought of that before!' she said.</p>
+					
+					<p>This I have produced as a scantling of Jack’s great eloquence and the force of his reasoning upon such abstruse matters.</p>
+					
+				</div>
+				
+				</div>
+				
+			</div>
+		</div>
+		
+	</section>
+	
+	<section class="section-2">
+	
+		
+	
+		<div class="container">
+			<div class="row">
+				
+				<div class="sect2-wrap">
+					
+					<div class="col-md-5 col-md-offset-7">
+						
+						<h2>Your day<br /> is protected</h2>
+						
+						<p>There have not been any since we have lived here, said my mother.</p>
+
+						<p>We thought - Mr. Copperfield thought - it was quite a large rookery; but the nests were very old ones, and the birds have deserted them a long while.</p>
+						
+						<div class="btn-wrap">
+							
+							<a href="#" class="button">Try to hack us<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						
+							<a href="#" class="button learn">Learn more</a>
+							
+						</div>
+						
+						
+						
+					</div>
+					
+				</div>
+				
+				<div class="img-wrap">
+			
+					<img src="img/section_2/iPhone.png" alt="">
+			
+				</div>
+				
+			</div>
+		</div>
+		
+		
+	</section>
+	
+	
+	<section class="section-3">
+		
+		<div class="container">
+			<div class="row">
+			
+			<div class="sect3-wrap">
+			
+				<div class="col-md-5">
+
+					<h2>We are almost everywhere</h2>
+					
+					<p>Now the races of these two have been for some ages utterly extinct, and besides to discourse any further of them would not be at all to my purpose.</p>
+
+					<p>Thus much I thought proper to tell you in relation to yourself, and to the trust I reposed in you.</p>
+					
+					<div class="partners">
+						
+						<p>Partners</p>
+						
+						<img src="img/section_3/Dropbox-Logo.png" alt="Dropbox" />
+						
+						<img src="img/section_3/Evernote-Logo.png" alt="Evernote" /> 
+						
+					</div>
+
+				</div>
+				
+				</div>
+				
+				<div class="img-wrap">
+			
+					<img src="img/section_3/Map.png" class="map hidden-sm hidden-xs" alt="Map">
+			
+					<img src="img/section_3/Dot.png" class="dot hidden-sm hidden-xs" alt="Map">
+			
+					<img src="img/section_3/Dot_map.png" class="map-dot hidden-lg hidden-md" alt="Map" />
+			
+				</div>
+				
+			</div>
+		</div>
+		
+	</section>
+	
+	
+	<section class="section-4">
+		
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-md-12">
+					
+					<h2>Beautiful Interface</h2>
+				
+					<p>Landing Screen</p>
+					
+				</div>
+				</div>
+		</div>
+				
+						
+						<ul class="img-list">
+
+							<li><img src="img/section_4/1.png" alt="Alt"></li>
+							<li><img src="img/section_4/2.png" alt="Alt"></li>
+							<li><img src="img/section_4/3.png" alt="Alt"></li>
+							<li><img src="img/section_4/4.png" alt="Alt"></li>
+							<li><img src="img/section_4/5.png" alt="Alt"></li>
+
+						</ul>
+				
+				
+				
+			
+			
+	</section>
+	
+	<section class="section-store">
+		
+		<div class="container">
+			<div class="row">
+				
+				<p>NewProvidence</p>
+				
+				<h2>Get it to your smartphone</h2>
+				
+				<div class="input-wrap clearfix">
+					
+					<input type="text" name="email" placeholder="e-mail" required>
+					
+					<div class="btn-wrap">
+						
+						<a href="#" class="button">Send Invite <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						
+					</div>
+					
+				</div>
+				
+				<div class="download-wrap">
+					
+					<p>or Download From</p>
+				
+					<div class="btn-wrap">
+				
+						<a href="#" class="button">
+						
+							<i class="fa fa-apple" aria-hidden="true"></i>
+							<p><span>Download on the</span> <br />App Store</p>
+							
+						</a>
+					
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+		
+	</section>
+	
+	<section class="section-5">
+		
+		<div class="container">
+			<div class="row">
+				
+				<div class="carousel">
+					
+					<div class="item-wrap">
+						
+						<div class="item">
+						
+							
+							<div class="col-md-6 col-md-offset-3">
+							
+								<h4>New Providence is the great UI kit</h4>
+							
+								<p>“Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door.”</p>
+								
+								<div class="star-wrap">
+									
+									<i class="fa fa-star" aria-hidden="true"></i>
+									
+									<i class="fa fa-star" aria-hidden="true"></i>
+									
+									<i class="fa fa-star" aria-hidden="true"></i>
+									
+									<i class="fa fa-star" aria-hidden="true"></i>
+									
+									<i class="fa fa-star gray-star" aria-hidden="true"></i>
+									
+								</div>
+								
+								<span>Cameron Dowman</span>
+								
+							
+							</div>
+							
+						</div>
+						
+					</div>
+					
+					<div class="item-wrap clearfix">
+						
+						<div class="item clearfix">
+						
+							
+							<div class="col-md-6 col-md-offset-3">
+							
+								<h4>New Providence is the great UI kit</h4>
+							
+								<p>“Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door.”</p>
+								
+								<div class="star-wrap">
+									
+									<i class="fa fa-star" aria-hidden="true"></i>
+									
+									<i class="fa fa-star" aria-hidden="true"></i>
+									
+									<i class="fa fa-star" aria-hidden="true"></i>
+									
+									<i class="fa fa-star" aria-hidden="true"></i>
+									
+									<i class="fa fa-star gray-star" aria-hidden="true"></i>
+									
+								</div>
+								
+								<span>Cameron Dowman</span>
+							
+							</div>
+							
+						</div>
+						
+					</div>
+					
+					<div class="item-wrap">
+						
+						<div class="item">
+							
+							<div class="col-md-6 col-md-offset-3">
+							
+								<h4>New Providence is the great UI kit</h4>
+							
+								<p>“Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door.”</p>
+								
+								<div class="star-wrap">
+									
+									<i class="fa fa-star" aria-hidden="true"></i>
+									
+									<i class="fa fa-star" aria-hidden="true"></i>
+									
+									<i class="fa fa-star" aria-hidden="true"></i>
+									
+									<i class="fa fa-star" aria-hidden="true"></i>
+									
+									<i class="fa fa-star gray-star" aria-hidden="true"></i>
+									
+								</div>
+								
+								<span>Cameron Dowman</span>
+							
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+		
+	</section>
+	
+	
+	<section class="section-6 ">
+		
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-lg-4">
+					
+					<h2>Choose your<br /> perfect plan</h2>
+					
+					<div class="tab-wrapper">
+						
+						<p>You are</p>
+						
+						<div class="tabs">
+							
+							<span class="tab active-tab">Individual</span>
+							<span class="tab">Company</span>
+							
+						</div>
+						
+					</div>
+					
+					<p>Thus much I thought proper to tell you in relation to yourself, and to the trust I reposed in you.</p>
+					
+					<p>Have a bigger team? <a href="">Let‘s talk</a></p>
+					
+				</div>
+				
+				<div class="col-lg-7 col-lg-offset-1">
+					
+					<div class="tab-content ">
+					
+					<div class="col-sm-6">
+						
+						<div class="tab-item">
+							
+							<div class="item">
+								
+								<h3>Starter</h3>
+								
+								<p class="price">Free</p>
+								
+								<p>Build your schedule<br /> every day</p>
+								
+								<ul>
+									<li><i class="fa fa-check" aria-hidden="true"></i>Unlimeted events</li>
+									<li><i class="fa fa-check" aria-hidden="true"></i>Connect Dropbox & Evernote</li>
+								</ul>
+								
+								<a href="#" class="button">Get started</a>
+								
+							</div>
+							
+							<div class="item item-dark">
+								
+								<h3>Pro</h3>
+								
+								<p class="price">$4.99</p>
+								
+								<p>Make your life<br/> better</p>
+								
+								<ul>
+									<li><i class="fa fa-check" aria-hidden="true"></i>Unlimeted events</li>
+									<li><i class="fa fa-check" aria-hidden="true"></i>Connect Dropbox & Evernote</li>
+									<li><i class="fa fa-check" aria-hidden="true"></i>Personal Assistant</li>
+								</ul>
+								
+								<a href="#" class="button">Make me a Pro</a>
+								
+							</div>
+							
+						</div>
+						
+						</div>
+						
+						<div class="tab-item">
+							
+							<div class="item">
+								
+								<h3>Starter</h3>
+								
+								<p class="price">Free</p>
+								
+								<p>Build your schedule<br /> every day</p>
+								
+								<ul>
+									<li><i class="fa fa-check" aria-hidden="true"></i>Unlimeted events</li>
+									<li><i class="fa fa-check" aria-hidden="true"></i>Connect Dropbox & Evernote</li>
+								</ul>
+								
+								<a href="#" class="button">Get started</a>
+								
+							</div>
+							
+							<div class="item item-dark">
+								
+								<h3>Pro</h3>
+								
+								<p class="price">$4.99</p>
+								
+								<p>Make your life<br/> better</p>
+								
+								<ul>
+									<li><i class="fa fa-check" aria-hidden="true"></i>Unlimeted events</li>
+									<li><i class="fa fa-check" aria-hidden="true"></i>Connect Dropbox & Evernote</li>
+									<li><i class="fa fa-check" aria-hidden="true"></i>Personal Assistant</li>
+								</ul>
+								
+								<a href="#" class="button">Make me a Pro</a>
+								
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+		
+	</section>
+	
+	<section class="section-store subscribe">
+		
+		<div class="container">
+			<div class="row">
+				
+				<h2>Subscribe our newsletters</h2>
+				
+				<div class="input-wrap clearfix">
+					
+					<input type="text" name="email" placeholder="e-mail" required>
+					
+					<div class="btn-wrap">
+						
+						<a href="#" class="button">Subscribe</a>
+						
+					</div>
+					
+				</div>
+				
+				<div class="download-wrap">
+					
+					<p>We promise to never spam you.</p>
+				
+					<div class="btn-wrap">
+					
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+		
+	</section>
+	
+	<footer>
+		
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-md-3">
+					
+					<div class="info-wrap">
+						
+						<img src="img/logo.png" alt="NewProvidence">
+						
+						<p>It was some time before he obtained any answer, and the reply, when made, was unpropitious.</p>
+						
+						<a href="#" class="button">
+						
+							<i class="fa fa-apple" aria-hidden="true"></i>
+							<p><span>Download on the</span> <br />App Store</p>
+							
+						</a>
+						
+						<div class="social-wrap">
+							
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+							
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+							
+							<i class="fa fa-google-plus" aria-hidden="true"></i>
+							
+							<i class="fa fa-tumblr" aria-hidden="true"></i>
+							
+							<i class="fa fa-pinterest-p" aria-hidden="true"></i>
+							
+							<i class="fa fa-linkedin" aria-hidden="true"></i>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				
+				<div class="col-md-2 col-xs-4 col-md-offset-3">
+					
+					<ul>
+						
+						<li>Learn More</li>
+						<li><a href="#">How it works?</a></li>
+						<li><a href="#">Meeting tools</a></li>
+						<li><a href="#">Live striming</a></li>
+						<li><a href="#">Contat method</a></li>
+						
+					</ul>
+					
+				</div>
+				
+				<div class="col-md-2 col-xs-4">
+					
+					<ul>
+						
+						<li>About Us</li>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Features</a></li>
+						<li><a href="#">Privacy police</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
+						
+					</ul>
+					
+				</div>
+				
+				<div class="col-md-2 col-xs-4">
+					
+					<ul>
+						
+						<li>Support</li>
+						<li><a href="#">F.A.Q.</a></li>
+						<li><a href="#">Contact us</a></li>
+						<li><a href="#">Live chat</a></li>
+						<li><a href="#">Phone call</a></li>
+						
+					</ul>
+					
+				</div>
+				
+			</div>
+		</div>
+		
+	</footer>
+
+
+	<div class="hidden"></div>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+<!-- Load CSS -->
+<script>
+
+	//Load Libs CSS
+	var ms=document.createElement("link");ms.rel="stylesheet";
+	ms.href="libs/animate/animate.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
+
+	//Header Styles (compress & paste to header after release)
+	var ms=document.createElement("link");ms.rel="stylesheet";
+	ms.href="_header.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
+	
+	//User Styles + Media Queries
+	var ms=document.createElement("link");ms.rel="stylesheet";
+	ms.href="_main.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
+	
+	//Font-Awesome
+	var ms=document.createElement("link");ms.rel="stylesheet";
+	ms.href="fonts/font-awesome/css/font-awesome.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
+	
+	//Owl-carousel
+	var ms=document.createElement("link");ms.rel="stylesheet";
+	ms.href="libs/owl/assets/owl.carousel.css";document.getElementsByTagName("head")[0].appendChild(ms);
+
+</script>
+
+<!-- Load Scripts -->
+<script>var scr = {"scripts":[
+	{"src" : "libs/modernizr/modernizr.js", "async" : false},
+	{"src" : "libs/jquery/jquery-1.11.2.min.js", "async" : false},
+	{"src" : "libs/waypoints/waypoints.min.js", "async" : false},
+	{"src" : "libs/animate/animate-css.js", "async" : false},
+	{"src" : "libs/plugins-scroll/plugins-scroll.js", "async" : false},
+	{"src" : "libs/drawSvg/drawfillsvg.min.js", "async" : false},
+	{"src" : "libs/owl/owl.carousel.min.js", "async" : false},
+	{"src" : "js/common.js", "async" : false}
+	]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+</script>
+
+</body>
+</html>
